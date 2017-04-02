@@ -46,6 +46,74 @@ body, html {
   background: url("../img/icon/sign-in.png") no-repeat;
   background-position: 0 0;
 }
-.user-login span {
+.user-login a {
+  color: #fff;
+  text-decoration: none;
   border-bottom: 1px dashed #fff;
+}
+
+.contacts {
+  position: relative;
+  float: left;
+  color: #fff;
+  min-width: 330px;
+  min-height: 25px;
+  padding-top: 21px;
+  padding-left: 52px;
+}
+
+.contacts::before {
+  position: absolute;
+  content: "";
+  background: url("../img/icon/contact.png") no-repeat;
+  height: 20px;
+  width: 20px;
+  top: 22px;
+  left: 16px;
+}
+
+.contacts a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-style: italic;
+}
+.contacts .comma {
+  padding-right: 6px;
+}
+
+.contacts .tel {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.schedule {
+  position: relative;
+  float: left;
+  min-width: 330px;
+  min-height: 15px;
+  padding-left: 52px;
+  padding-top: 3px;
+  color: #fff;
+  font-style: italic;
+}
+
+.schedule::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  left: 16px;
+  background: url("../img/icon/time.png") no-repeat;
+}
+
+.schedule p {
+  margin: 0;
+}
+
+.schedule strong{
+  font-weight: bold;
+  font-size: 15px;
 }
