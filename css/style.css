@@ -21,6 +21,11 @@ body, html {
 }
 
 /*------------header----------------------*/
+.header {
+  height: 185px;
+  background-image: linear-gradient(to top, #91d402 0%, #2c5d00 100%);
+}
+
 .header-logo {
   float: left;
 }
@@ -176,4 +181,54 @@ body, html {
 
 .main-menu__list a:first-child {
   padding-left: 14px;
+}
+
+
+.info-basket {
+  float: left;
+  margin-top: 11px;
+  margin-right: 180px;
+  margin-bottom: 9px;
+  margin-left: 30px;
+  font-style: italic;
+  color: #4b6e03;
+}
+
+.basket {
+  position: relative;
+  float: left;
+  line-height: 46px;
+  color: #4b6e03;
+}
+
+.basket .in-basket {
+  padding-left: 40px;
+  padding-right: 8px;
+  font-weight: bold;
+  font-style: italic;
+  color: #4b6e03;
+}
+
+.basket .in-basket::before {
+  position: absolute;
+  content: "";
+  background: url("../img/icon/basket1.png") no-repeat;
+  width: 32px;
+  height: 28px;
+  top: 8px;
+  left: 3px;
+}
+
+.basket strong {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+/*------------------main-content--------------*/
+
+.main-content {
+  height: 100px;
+  background: url(../img/wave3.png) top repeat-x;
+
 }
