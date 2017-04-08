@@ -4,6 +4,7 @@ body, html {
   line-height: 27px;
   padding: 0;
   margin: 0;
+  color: #3f3f3e;
 }
 
 .conteiner {
@@ -227,8 +228,92 @@ body, html {
 
 /*------------------main-content--------------*/
 
+/*------------slider--------------*/
+
 .main-content {
   height: 100px;
   background: url(../img/wave3.png) top repeat-x;
+}
 
+.slider-clothes {
+  position: relative;
+  float:left;
+  width: 594px;
+  height: 270px;
+  margin-top: 20px;
+  text-align: center;
+  border: 3px solid #78bf32;
+  border-radius: 10px;
+}
+
+.slider-clothes img {
+  padding: 3px 67px;
+}
+
+.slider-clothes h2 {
+  margin: 0;
+  margin-top: -12px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #ee7901;
+}
+
+.slider-clothes p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 26px;
+  color: #3f3f3e;
+}
+
+/*---------------------*/
+
+/*---------------------news--------------------*/
+.news {
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 320px;
+}
+
+.news h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ee7901;
+}
+
+.news-block {
+  min-height: 170px;
+  background: url("../img/wave4.png") left bottom repeat-x;
+  background-position: 0 155px;
+}
+
+.news-block:last-child {
+  background: none;
+}
+
+.news-block span {
+  font-style: italic;
+}
+
+.news-block h3 {
+  margin: 0;
+  margin-top: 3px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.news-block p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.news a {
+  text-decoration: none;
+  font-style: italic;
+  color: #78bf32;
 }
