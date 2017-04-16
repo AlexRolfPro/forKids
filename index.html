@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>4Kids</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-
+  <link rel="stylesheet" type="text/css" href="js/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css">
 </head>
 <body>
   <div class="wrapper">
@@ -27,7 +28,7 @@
         </div>
         <div class="schedule">
           <p>
-            Пн. - Вс. с <strong>08.30</strong> до <strong>19.00</strong>
+            Пн. - Вс. с <span>08.30</span> до <span>19.00</span>
           </p>
         </div>
         <nav class="main-menu">
@@ -66,10 +67,18 @@
     <div class="main-content">
       <div class="conteiner">
         <div class="slider-clothes">
-          <img src="img/slider_1.jpg" alt="kids" class="first-img" width="460" height="200">
-          <!-- <img src="img/slider_2.jpg" alt="kids" class="second-img"> -->
-          <h2>Новый ассортимент !!!</h2>
-          <p>Зимняя одежда для мальчиков и девочек</p>
+          <div class="fade">
+            <div>
+              <img src="img/slider_1.jpg" alt="kids" class="first-img" width="460" height="200">
+              <h2>Новый ассортимент ???</h2>
+              <p>Зимняя одежда для мальчиков и девочек</p>
+            </div>
+            <div>
+              <img src="img/slider_2.jpg" alt="kids" class="second-img" width="460" height="200">
+              <h2>Новый ассортимент !!!</h2>
+              <p>Зимняя одежда для мальчиков и девочек</p>
+            </div>
+          </div>
         </div>
         <div class="clothes-and-toys">
           <div class="clothes"></div>
@@ -119,5 +128,19 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.fade').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+      });
+    });
+  </script>
 </body>
 </html>
