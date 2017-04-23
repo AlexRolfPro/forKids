@@ -238,6 +238,7 @@ header {
   width: 594px;
   height: 270px;
   margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
   border: transparent;
   border-radius: 10px;
@@ -296,8 +297,78 @@ header {
   color: #3f3f3e;
 }
 
-/*---------------------*/
+/*---------------clothes-and-toys--------------*/
 
+.clothes-and-toys {
+  float: left;
+  width: 587px;
+}
+
+.clothes-and-toys__item {
+  float: left;
+}
+
+.clothes, .toys {
+  width: 290px;
+  text-align: center
+}
+
+.clothes__list, .toys__list {
+  width: 88%;
+  margin: 0;
+  padding: 0;
+}
+
+.clothes-and-toys__item:first-child {
+  margin-right: 7px;
+}
+
+.clothes__list-item, .toys__list-item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 23px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.clothes__list-item::before, .toys__list-item::before {
+  position: absolute;
+  content: "";
+  top: 12px;
+  left: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #df4300;
+}
+
+.clothes__list-item a, .toys__list-item a {
+  color: #5a5a5a;
+  text-decoration: none;
+  border-bottom: 1px dashed #5a5a5a;
+}
+
+.clothes__img-container, .toys__img-container {
+  height: 200px;
+  line-height: 200px;
+  cursor: pointer;
+}
+
+.clothes__img-container img, .toys__img-container img {
+  vertical-align: middle;
+}
+
+.clothes__img-title, .toys__img-title {
+  width: 92%;
+  margin-top: 5px;
+  line-height: 15px;
+}
+
+.toys__img-title {
+  margin-top: 7px;
+  margin-bottom: 2px;
+}
 /*---------------------news--------------------*/
 .news {
   float: right;
