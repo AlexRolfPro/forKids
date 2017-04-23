@@ -117,7 +117,7 @@
         <div class="clothes-and-toys">
           <div class="clothes clothes-and-toys__item">
             <div class="clothes__img-container">
-              <img src="img/clothes_1.png" width="186" height="178" alt="Одежда">
+              <img id="clothes__img" src="img/clothes_1.png" width="150" height="150" alt="Одежда">
             </div>
             <div class="clothes__img-title">
               <img src="img/clothes.png" width="142" height="33" alt="Одежда">
@@ -176,6 +176,7 @@
   </div>
   <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/loupe/jquery.loupe.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function(){
@@ -185,6 +186,11 @@
         speed: 500,
         fade: true,
         cssEase: 'linear'
+      });
+      $('#clothes__img').loupe({
+        width: 200, // width of magnifier
+        height: 150, // height of magnifier
+        loupe: 'loupe' // css class for magnifier
       });
     });
   </script>

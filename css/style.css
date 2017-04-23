@@ -5,6 +5,7 @@ body, html {
   padding: 0;
   margin: 0;
   color: #3f3f3e;
+  background-color: #fffcf8;
 }
 
 .conteiner {
@@ -317,6 +318,7 @@ header {
   width: 88%;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .clothes-and-toys__item:first-child {
@@ -350,15 +352,34 @@ header {
 }
 
 .clothes__img-container, .toys__img-container {
+  position: relative;
   height: 200px;
   line-height: 200px;
-  cursor: pointer;
+  /*cursor: pointer;*/
+}
+
+.clothes__img-container::after, .toys__img-container::after {
+  position: absolute;
+  content: "";
+  height: 165px;
+  width: 215px;
+  top: 30px;
+  left: 30px;
+  border: 1px solid #fbf5ed;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 1;
 }
 
 .clothes__img-container img, .toys__img-container img {
+  position: relative;
   vertical-align: middle;
+  z-index: 2;
 }
 
+.clothes__img {
+  z-index: 3;
+}
 .clothes__img-title, .toys__img-title {
   width: 92%;
   margin-top: 5px;
