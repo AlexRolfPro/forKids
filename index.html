@@ -154,9 +154,110 @@
             </ul>
           </div>
         </div>
-        <div class="goods">
-
+      </div>
+        <div class="goods-wraper-out">
+          <div class="conteiner">
+            <div class="goods-wrapper">
+              <div class="goods">
+                <div class="goods-menu">
+                  <ul class="goods-menu__list">
+                    <li class="goods-menu__list-item goods-menu__list-item_active">
+                      <a href="#">Акции</a>
+                    </li>
+                    <li class="goods-menu__list-item">
+                      <a href="#">Хиты продаж</a>
+                    </li>
+                    <li class="goods-menu__list-item">
+                      <a href="#">Новинки</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="goods-slider-wrapper">
+              <div class="goods-slider-nav">
+                  <div class="prev"></div>
+                  <div class="next"></div>
+                </div>
+              <div class="goods-slider">
+                <div class="goods-slider__item">
+                  <div class="goods-slider__item-category">Акция</div>
+                  <div class="goods-slider__item-image">
+                    <img src="img/slider2_1.jpg" alt="Автомобиль">
+                  </div>
+                  <div class="goods-slider__item-title">
+                    Автомобиль Dodge 2005 Charger Daytona R/T
+                  </div>
+                  <span class="goods-slider__item-price">
+                    <span class="goods-slider__item-price-num">60</span>
+                    <span class="goods-slider__item-price-sign">грн.</span>
+                  </span>
+                  <a class="goods-slider__item-button_not-available" href="">нет в наличии</a>
+                  <span class="goods-slider__item-old-prise">
+                    <span class="goods-slider__item-old-price-num">70</span>
+                    <span class="goods-slider__item-old-price-sign">грн.</span>
+                  </span>
+                </div>
+                <div class="goods-slider__item">
+                  <div class="goods-slider__item-category">Акция</div>
+                  <div class="goods-slider__item-image">
+                    <img src="img/slider2_2.jpg" alt="Кукла">
+                  </div>
+                  <div class="goods-slider__item-title">
+                    Кукла Хайден, набор "Модница на прогулке"
+                  </div>
+                  <span class="goods-slider__item-price">
+                    <span class="goods-slider__item-price-num">165</span>
+                    <span class="goods-slider__item-price-sign">грн.</span>
+                  </span>
+                  <a class="goods-slider__item-button" href="">В корзину</a>
+                  <span class="goods-slider__item-old-prise">
+                    <span class="goods-slider__item-old-price-num">170</span>
+                    <span class="goods-slider__item-old-price-sign">грн.</span>
+                  </span>
+                </div>
+                <div class="goods-slider__item">
+                  <div class="goods-slider__item-category">Акция</div>
+                  <div class="goods-slider__item-image">
+                    <img src="img/slider2_3.jpg" alt="Медведь">
+                  </div>
+                  <div class="goods-slider__item-title">
+                    Beanie Boos "Медведь"
+                  </div>
+                  <span class="goods-slider__item-price">
+                    <span class="goods-slider__item-price-num">45</span>
+                    <span class="goods-slider__item-price-sign">грн.</span>
+                  </span>
+                  </span>
+                  <a class="goods-slider__item-button" href="">В корзину</a>
+                  <span class="goods-slider__item-old-prise">
+                    <span class="goods-slider__item-old-price-num">50</span>
+                    <span class="goods-slider__item-old-price-sign">грн.</span>
+                  </span>
+                </div>
+                <div class="goods-slider__item">
+                  <div class="goods-slider__item-category">Акция</div>
+                  <div class="goods-slider__item-image">
+                    <img src="img/slider2_1.jpg" alt="Автомобиль">
+                  </div>
+                  <div class="goods-slider__item-title">
+                    Автомобиль Dodge 2005
+                  </div>
+                  <span class="goods-slider__item-price">
+                    <span class="goods-slider__item-price-num">100</span>
+                    <span class="goods-slider__item-price-sign">грн.</span>
+                  </span>
+                  <a class="goods-slider__item-button_not-available" href="">нет в наличии</a>
+                  <span class="goods-slider__item-old-prise">
+                    <span class="goods-slider__item-old-price-num">90</span>
+                    <span class="goods-slider__item-old-price-sign">грн.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
         </div>
+      <div class="conteiner">
         <div class="comments">
 
         </div>
@@ -164,15 +265,16 @@
 
         </div>
       </div>
-    </div>
-    <footer>
-      <div class="brends">
+      <footer>
+        <div class="conteiner">
+          <div class="brends">
 
-      </div>
-      <div class="copyright">
+          </div>
+          <div class="copyright">
 
+          </div>
       </div>
-    <footer>
+    </footer>
   </div>
   <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/slick/slick.min.js"></script>
@@ -191,6 +293,14 @@
         width: 200, // width of magnifier
         height: 150, // height of magnifier
         loupe: 'loupe' // css class for magnifier
+      });
+      $('.goods-slider').slick({
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        variableWidth: true
       });
     });
   </script>
