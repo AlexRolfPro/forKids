@@ -23,7 +23,7 @@
         </div>
         <div class="contacts">
           <a href=«tel:0552442592»><span class="tel">(055)</span>244-25-92</a>
-          <span class="comma">,</span>
+          ,
           <a href=«tel:0666563060»><span class="tel">(066)</span> 656-30-60</a>
         </div>
         <div class="schedule">
@@ -56,9 +56,9 @@
             </li>
           </ul>
         </nav>
-        <a class="info-basket" href="#">
+        <span class="info-basket" href="#">
           Бесплатная доставка по Украине
-        </a>
+        </span>
         <a class="in-basket" href="#">
           <span class="basket">В корзине:</span><span class="number"> 12 </span>товаров | <span class="number">2,300 </span>грн.
         </a>
@@ -159,19 +159,17 @@
           <div class="conteiner">
             <div class="goods-wrapper">
               <div class="goods">
-                <div class="goods-menu">
-                  <ul class="goods-menu__list">
-                    <li class="goods-menu__list-item goods-menu__list-item_active">
-                      <a href="#">Акции</a>
-                    </li>
-                    <li class="goods-menu__list-item">
-                      <a href="#">Хиты продаж</a>
-                    </li>
-                    <li class="goods-menu__list-item">
-                      <a href="#">Новинки</a>
-                    </li>
-                  </ul>
-                </div>
+                <ul class="goods__list">
+                  <li class="goods__list-item goods__list-item_active">
+                    <a href="#">Акции</a>
+                  </li>
+                  <li class="goods__list-item">
+                    <a href="#">Хиты продаж</a>
+                  </li>
+                  <li class="goods__list-item">
+                    <a href="#">Новинки</a>
+                  </li>
+                </ul>
               </div>
               <div class="goods-slider-wrapper">
               <div class="goods-slider-nav">
@@ -182,16 +180,16 @@
                 <div class="goods-slider__item">
                   <div class="goods-slider__item-category">Акция</div>
                   <div class="goods-slider__item-image">
-                    <img src="img/slider2_1.jpg" alt="Автомобиль">
+                    <img src="img/slider2_1.jpg" width="231" height="113" alt="Автомобиль">
                   </div>
                   <div class="goods-slider__item-title">
-                    Автомобиль Dodge 2005 Charger Daytona R/T
+                    Автомобиль Dodge 2005 Charger Daytona R/T Charger Daytona R/T Charger Daytona R/T Charger Daytona R/T
                   </div>
                   <span class="goods-slider__item-price">
                     <span class="goods-slider__item-price-num">60</span>
                     <span class="goods-slider__item-price-sign">грн.</span>
                   </span>
-                  <a class="goods-slider__item-button_not-available" href="">нет в наличии</a>
+                  <button type="submit" class="goods-slider__item-button_not-available" href="">нет в наличии</button>
                   <span class="goods-slider__item-old-prise">
                     <span class="goods-slider__item-old-price-num">70</span>
                     <span class="goods-slider__item-old-price-sign">грн.</span>
@@ -209,7 +207,7 @@
                     <span class="goods-slider__item-price-num">165</span>
                     <span class="goods-slider__item-price-sign">грн.</span>
                   </span>
-                  <a class="goods-slider__item-button" href="">В корзину</a>
+                  <button type="submit" class="goods-slider__item-button">В корзину</button>
                   <span class="goods-slider__item-old-prise">
                     <span class="goods-slider__item-old-price-num">170</span>
                     <span class="goods-slider__item-old-price-sign">грн.</span>
@@ -218,7 +216,7 @@
                 <div class="goods-slider__item">
                   <div class="goods-slider__item-category">Акция</div>
                   <div class="goods-slider__item-image">
-                    <img src="img/slider2_3.jpg" alt="Медведь">
+                    <img src="img/slider2_3.jpg" height="300" alt="Медведь">
                   </div>
                   <div class="goods-slider__item-title">
                     Beanie Boos "Медведь"
@@ -228,7 +226,7 @@
                     <span class="goods-slider__item-price-sign">грн.</span>
                   </span>
                   </span>
-                  <a class="goods-slider__item-button" href="">В корзину</a>
+                  <button type="submit"  class="goods-slider__item-button" href="">В корзину</button>
                   <span class="goods-slider__item-old-prise">
                     <span class="goods-slider__item-old-price-num">50</span>
                     <span class="goods-slider__item-old-price-sign">грн.</span>
@@ -246,7 +244,7 @@
                     <span class="goods-slider__item-price-num">100</span>
                     <span class="goods-slider__item-price-sign">грн.</span>
                   </span>
-                  <a class="goods-slider__item-button_not-available" href="">нет в наличии</a>
+                  <button type="submit"  class="goods-slider__item-button_not-available" href="">нет в наличии</button>
                   <span class="goods-slider__item-old-prise">
                     <span class="goods-slider__item-old-price-num">90</span>
                     <span class="goods-slider__item-old-price-sign">грн.</span>
@@ -318,7 +316,25 @@
           <a href="" class="commentary__more">все отзывы &rarr;</a>
         </div>
         <div class="interview">
-
+          <h2 class="interview__header">Опрос</h2>
+          <div class="interview__question">Как вам наш сайт?</div>
+          <ul class="interview__list">
+            <li class="interview__item interview__item_orange">
+              <span class="interview__answer interview__answer">Супер</span>
+            </li>
+            <li class="interview__item interview__item_green">
+              <span class="interview__answer">Отлично</span>
+            </li>
+            <li class="interview__item">
+              <span class="interview__answer">Хорошо</span>
+            </li>
+            <li class="interview__item">
+              <span class="interview__answer">Хорошо</span>
+            </li>
+            <li class="interview__item">
+              <span class="interview__answer">Незнаю</span>
+            </li>
+          </ul>
         </div>
       </div>
       <footer>

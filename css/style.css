@@ -23,8 +23,20 @@ body, html {
 
 /*------------header----------------------*/
 header {
+  position: relative;
   height: 185px;
+  margin-bottom: 20px;
   background-image: linear-gradient(to top, #91d402 0%, #2c5d00 100%);
+}
+
+header::before {
+  position: absolute;
+  top: 183px;
+  content: "";
+  width: 100%;
+  height: 8px;
+  background: url(../img/wave3.png) repeat-x;
+  z-index: 0;
 }
 
 .header-logo {
@@ -86,9 +98,6 @@ header {
   text-decoration: none;
   text-transform: capitalize;
   font-style: italic;
-}
-.contacts .comma {
-  padding-right: 6px;
 }
 
 .contacts .tel {
@@ -185,7 +194,6 @@ header {
 .info-basket {
   float: left;
   margin: 9px 0 9px 30px;
-  text-decoration: none;
   font-style: italic;
   color: #4b6e03;
 }
@@ -227,8 +235,7 @@ header {
 /*------------slider--------------*/
 
 .main-content {
-  height: 100px;
-  background: url(../img/wave3.png) top repeat-x;
+
 }
 
 .slider-clothes {
@@ -236,7 +243,6 @@ header {
   float:left;
   width: 594px;
   height: 270px;
-  margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
   border: transparent;
@@ -392,7 +398,6 @@ header {
 /*---------------------news--------------------*/
 .news {
   float: right;
-  margin-top: 20px;
   width: 320px;
 }
 
@@ -517,7 +522,7 @@ header {
   opacity: 1;
 }
 
-.goods-menu__list {
+.goods__list {
   padding: 0;
   margin: 0;
   margin-left: 60px;
@@ -525,13 +530,13 @@ header {
   list-style: none;
 }
 
-.goods-menu__list-item {
+.goods__list-item {
   display: inline-block;
   padding: 30px 20px 10px 20px;
   margin-top: -10px;
 }
 
-.goods-menu__list-item_active {
+.goods__list-item_active {
   position: relative;
   background-color: #743807;
   background-image: linear-gradient(to top, #ffaa07 0%, #ee692e 70%, #ffbd0c 99%, #ffbd0c 100%);
@@ -541,7 +546,7 @@ header {
   box-shadow: -3.1px 2.6px 0 rgba(0, 0, 0, 0.19), inset 0 1px 1px white;
 }
 
-.goods-menu__list-item a {
+.goods__list-item a {
   text-decoration: none;
   border-bottom: 2px dotted #5a5a5a;
   font-size: 20px;
@@ -549,7 +554,7 @@ header {
   color: #5a5a5a;
 }
 
-.goods-menu__list-item_active a {
+.goods__list-item_active a {
   border-bottom: none;
   color: #fff;
 }
@@ -574,34 +579,32 @@ header {
 .goods-slider__item-category {
   width: 45px;
   height: 13px;
-  margin: 5px 0;
-  margin-left: -3px;
+  margin: 5px 0 5px -3px;
   padding: 7px 15px;
   color: white;
-  font-family: Arial;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 18px;
+  font: 400 13px/18px Arial;
   text-transform: uppercase;
   text-shadow: 0 -1px 1px rgba(62, 40, 40, 0.75);
   border: 1px solid #b26b07;
   border-top: 1px solid #fff;
   border-left: 1px solid #fff;
   border-radius: 10px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-radius: 0 3px 3px 0;
   background-image: linear-gradient(to top, #dc4a09 0%, #ffc61a 100%);
   box-shadow: 1.5px 2.6px 0 rgba(0, 0, 0, 0.29), inset 0 1px 1px white;
 }
 
 .goods-slider__item-image {
-  width: 260px;
-  height: 180px;
+  max-height: 180px;
+  max-width: 260px;
   margin: 0;
+  line-height: 180px;
+  text-align: center;
+  overflow: hidden;
 }
 
 .goods-slider__item-image img {
-  margin: auto;
+  vertical-align: middle;
 }
 
 .goods-slider__item-title {
@@ -615,6 +618,7 @@ header {
   font-size: 14px;
   font-style: italic;
   line-height: 18px;
+  overflow: hidden;
 }
 
 .goods-slider__item-price {
@@ -645,18 +649,17 @@ header {
 }
 
 .goods-slider__item-button {
+  float: right;
   position: relative;
-  width: 59px;
-  height: 13px;
   padding: 7px 10px 7px 40px;
-  margin-left: 40px;
+  margin-right: 10px;
   color: white;
-  font-family: Arial;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 27px;
+  font: 400 13px/17px Arial;
   text-decoration: none;
+  border: none;
+  outline: none;
   border-radius: 5px;
+  cursor: pointer;
   background-image: linear-gradient(to top, #356a06 0%, #559c16 18%, #a4d60d 100%);
   text-shadow: 0.5px 0.9px 1px rgba(0, 0, 0, 0.26);
 }
@@ -686,13 +689,14 @@ header {
 }
 
 .goods-slider__item-button_not-available {
-  padding: 8px 10px;
-  margin-left: 50px;
-  font-family: Arial;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 27px;
+  float: right;
+  padding: 7px 10px;
+  margin-right: 10px;
+  font: 400 13px/17px Arial;
   text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
   border-radius: 5px;
   color: #5a5a5a;
   background-image: linear-gradient(to top, #919191 0%, #cccccc 18%, #fff 100%);
@@ -707,6 +711,7 @@ header {
 /*--------------------------------comments--------------------------------*/
 
 .comments {
+  float: left;
   max-width: 600px;
   margin-bottom: 30px;
 }
@@ -853,4 +858,63 @@ header {
   text-decoration: none;
   font-style: italic;
   color: #78bf32;
+}
+
+
+/*-------------------------interview-----------------------*/
+
+.interview {
+  float: right;
+  width: 256px;
+  margin-top: 7px;
+  margin-right: 20px;
+  padding: 13px 19px;
+  border: 3px solid #78bf32;
+  border-radius: 10px;
+}
+
+.interview__header {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ee7901;
+}
+
+.interview__question {
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.interview__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.interview__item {
+  margin-bottom: -3px;
+  border-bottom: 12px solid #c4c4c4;
+  width: 5%;
+}
+
+.interview__item_orange {
+  border-bottom: 12px solid #f58303;
+  width: 97%;
+}
+
+.interview__item_green {
+  border-bottom: 12px solid #78bf32;
+  width: 68%;
+}
+
+.interview__answer {
+  font-style: italic;
+  line-height: 12px;
+  font-size: 12px;
+  color: #6a6a6a;
 }
