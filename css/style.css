@@ -11,6 +11,7 @@ body, html {
 .conteiner {
   max-width: 940px;
   padding: 0 10px;
+  clear: both;
   /*outline: 1px solid green;*/
 }
 
@@ -21,6 +22,11 @@ body, html {
   /*background: url(../img/33.png) no-repeat;*/
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 /*------------header----------------------*/
 header {
   position: relative;
@@ -385,6 +391,7 @@ header::before {
 .clothes__img {
   z-index: 3;
 }
+
 .clothes__img-title, .toys__img-title {
   width: 92%;
   margin-top: 5px;
@@ -404,14 +411,22 @@ header::before {
 .news__header {
   margin: 0;
   font-size: 22px;
+  line-height: 27px;
   font-weight: bold;
   color: #ee7901;
 }
 
+.news__blocks {
+  max-height: 540px;
+  overflow: hidden;
+}
+
 .news__block {
-  min-height: 170px;
+  max-height: 180px;
+  min-height: 180px;
   background: url("../img/wave4.png") left bottom repeat-x;
-  background-position: 0 155px;
+  background-position: 0 165px;
+  overflow: hidden;
 }
 
 .news__block:last-child {
@@ -419,22 +434,30 @@ header::before {
 }
 
 .news__date {
+  font-size: 13px;
+  max-height: 27px;
   font-style: italic;
+  overflow: hidden;
 }
 
 .news__block-header {
+  max-height: 34px;
   margin: 0;
   margin-top: 3px;
   font-size: 14px;
+  line-height: 17px;
   text-transform: uppercase;
+  overflow: hidden;
 }
 
-.news__block p {
+ .news__text {
+  max-height: 90px;
   margin-top: 10px;
   margin-bottom: 10px;
   font-style: italic;
   font-size: 12px;
   line-height: 15px;
+  overflow: hidden;
 }
 
 .news__more-link {
@@ -713,7 +736,8 @@ header::before {
 .comments {
   float: left;
   max-width: 600px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  clear: both;
 }
 
 .comments__header {
@@ -769,6 +793,20 @@ header::before {
   font-style: italic;
   border-bottom: none;
   color: #015094;
+}
+
+.comments__link_positive:hover,
+.comments__link_negative:hover,
+.comments__link_neitral:hover,
+.comments__link_all:hover {
+  font-style: normal;
+}
+
+.comments__link_positive-active:hover,
+.comments__link_negative-active:hover,
+.comments__link_neitral-active:hover,
+.comments__link_all-active:hover {
+  font-style: italic;
 }
 
 .commentary {
@@ -840,9 +878,8 @@ header::before {
 }
 
 .commentary__more-link {
-  position: absolute;
-  top: 15px;
-  right: 30px;
+  display: inline-block;
+  float: right;
   font-size: 13px;
   line-height: 18px;
   text-decoration: none;
@@ -897,24 +934,120 @@ header::before {
 }
 
 .interview__item {
-  margin-bottom: -3px;
-  border-bottom: 12px solid #c4c4c4;
+  margin-top: 15px;
+  border-bottom: 10px solid #c4c4c4;
   width: 5%;
+  line-height: 13px;
+  clear: both;
 }
 
 .interview__item_orange {
-  border-bottom: 12px solid #f58303;
-  width: 97%;
+  border-bottom: 10px solid #f58303;
+  width: 92%;
 }
 
 .interview__item_green {
-  border-bottom: 12px solid #78bf32;
-  width: 68%;
+  border-bottom: 10px solid #78bf32;
+  width: 45%;
 }
 
+.interview__item_red {
+  border-bottom: 10px solid #ee6464;
+  width: 15%;
+}
+
+
 .interview__answer {
+  display: block;
+  min-width: 80px;
+  vertical-align: top;
   font-style: italic;
   line-height: 12px;
   font-size: 12px;
   color: #6a6a6a;
+}
+
+.interview__answer-percent {
+  float: right;
+  display: inline-block;
+  margin-left: 1px;
+  font-style: italic;
+  line-height: 12px;
+  font-size: 12px;
+  color: #6a6a6a;
+}
+
+/*---------------------footer---------------------*/
+
+/*--------------------brends------------------------*/
+footer {
+  position: relative;
+  background-color: #efebe0;
+  min-height: 290px;
+}
+
+footer::before {
+    position: absolute;
+    top: -5px;
+    content: "";
+    width: 100%;
+    height: 8px;
+    background: url(../img/wave6.png) repeat-x;
+    z-index: 0;
+}
+
+.brends {
+  position: relative;
+  width: 940px;
+  margin-bottom: 35px;
+}
+
+.brends__header {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ee7901;
+  line-height: 80px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.brends__slider-nav {
+  position: relative;
+}
+
+.brends__slider {
+  width: 82%;
+  margin: 0 auto;
+}
+
+.brends__nav-prev,
+.brends__nav-next {
+  top: 10px;
+}
+
+.brends__nav-prev {
+  left: 20px;
+}
+
+.brends__nav-next {
+  right: 20px;
+}
+
+.brends__slider-item {
+  text-align: center;
+  width: 140px;
+  margin: 0 8px;
+  overflow: hidden;
+}
+
+/*--------------------copiright----------------*/
+
+.copyright {
+  border-top: 1px solid #6a6a6a;
+}
+
+.copyright__text {
+  display: inline-block;
+  margin-top: 15px;
 }
